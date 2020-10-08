@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import Rules from "./Rules";
+import RulesModal from "./Rules";
 
 function Header() {
   const [toggle, setToggle] = useState(false);
@@ -16,7 +16,7 @@ function Header() {
         <Text>Cows On My Side!</Text>{" "}
       </Text>
       <Button title="Rules" style={styles.rulesButton} onPress={handleToggle} />
-      {toggle && <Rules toggle={toggle} setToggle={setToggle} />}
+      {toggle && <RulesModal toggle={toggle} setToggle={setToggle} />}
     </View>
   );
 }
