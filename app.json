@@ -1,0 +1,12 @@
+{
+  "name": "mobile-cows",
+  "displayName": "mobile-cows",
+  "expo": {
+    "name": "mobile-cows",
+    "slug": "mobile-cows",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
