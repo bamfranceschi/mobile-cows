@@ -1,7 +1,8 @@
+import "react-native-gesture-handler";
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import Header from "./Header";
-import GameArea from "./GameArea";
+import GameAreaTab from "./GameAreaTab";
 
 export default function App() {
   const [lScore, setLScore] = useState(0);
@@ -48,7 +49,7 @@ export default function App() {
         🐮
       </Text>
       <Button title="New game"></Button>
-      <GameArea
+      <GameAreaTab
         lScore={lScore}
         setLScore={setLScore}
         rScore={rScore}
