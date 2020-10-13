@@ -25,10 +25,8 @@ const styles = StyleSheet.create({
   container: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-start",
     marginLeft: 15,
     marginRight: 15,
-    // alignContent: "space-around",
   },
   title: {
     flex: 2,

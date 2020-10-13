@@ -44,14 +44,6 @@ function RulesModal(props) {
             <Text>{""}</Text>
             <Unorderedlist>
               <Text>
-                You must claim herds of cattle that appear in your territory
-                before the other team claims them. If you claim yours first, you
-                score a point. Should you fail, you lose a point.
-              </Text>
-            </Unorderedlist>
-            <Text>{""}</Text>
-            <Unorderedlist>
-              <Text>
                 If you think you saw a cow, but it was in fact a horse, bale of
                 hay, old tractor, UFO, etc., your team loses 5 points.
               </Text>
