@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, View, StyleSheet } from "react-native";
 
-function LeftTeam({ navigation }) {
+function LeftTeam() {
   return (
     <View>
       <Button>My Cows</Button>
