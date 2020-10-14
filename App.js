@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import Header from "./Header";
-import LeftTeam from "./LeftTeam";
-import RightTeam from "./RightTeam";
 import TabBar from "./TabBar";
+import GameArea from "./GameArea";
 
 export default function App() {
   const [lScore, setLScore] = useState(0);
@@ -15,35 +14,6 @@ export default function App() {
     setLScore(0);
     setRScore(0);
   };
-  //+1 to my team
-  const addLCows = () => {
-    setLScore(lScore + 1);
-  };
-  const addRCows = () => {
-    setRScore(rScore + 1);
-  };
-  //-1 to other team
-  const minusLCows = () => {
-    setLScore(lScore - 1);
-  };
-  const minusRCows = () => {
-    setRScore(rScore - 1);
-  };
-  //-5 to my team
-  const lNotACow = () => {
-    setLScore(lScore - 5);
-  };
-  const rNotACow = () => {
-    setRScore(rScore - 5);
-  };
-
-  const lReversal = () => {
-    setLScore(lScore + 5);
-  };
-
-  const rReversal = () => {
-    setRScore(rScore + 5);
-  };
 
   return (
     <View style={styles.container}>
@@ -51,8 +21,16 @@ export default function App() {
       <Text role="img" aria-label="cow-emoji" style={styles.cowImage}>
         🐮
       </Text>
-      <Button title="New game"></Button>
+      <Button title="New game" onPress={newGame}></Button>
+      <Text>{`Score: ${lScore} | ${rScore}`}</Text>
       <TabBar team={team} setTeam={setTeam} />
+      <GameArea
+        lScore={lScore}
+        rScore={rScore}
+        setLScore={setLScore}
+        setRScore={setRScore}
+        team={team}
+      />
     </View>
   );
 }
