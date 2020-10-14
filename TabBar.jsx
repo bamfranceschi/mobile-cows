@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import TabBarItem from "./TabBarItem";
 
-function TabBar({ team, setTeam }) {
+export default function TabBar({ team, setTeam }) {
   return (
     <View style={styles.container}>
       <TabBarItem
@@ -28,5 +28,3 @@ const styles = StyleSheet.create({
     borderTopColor: "#dddddd",
   },
 });
-
-export default TabBar;

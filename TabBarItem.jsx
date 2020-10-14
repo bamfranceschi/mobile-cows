@@ -1,9 +1,9 @@
 import React from "react";
-import { Text, TouchableHeighlight, StyleSheet } from "react-native";
+import { Text, TouchableHighlight, StyleSheet } from "react-native";
 
-function TabBarItem({ title, team, setTeam, border, selected }) {
+export default function TabBarItem({ title, team, setTeam, border, selected }) {
   return (
-    <TouchableHeighlight
+    <TouchableHighlight
       underlayColor="#efefef"
       onPress={setTeam}
       style={[
@@ -16,7 +16,7 @@ function TabBarItem({ title, team, setTeam, border, selected }) {
       <Text style={[styles.itemText, team === title ? styles.bold : null]}>
         {title}
       </Text>
-    </TouchableHeighlight>
+    </TouchableHighlight>
   );
 }
 
@@ -41,5 +41,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
 });
-
-export default TabBarItem;
