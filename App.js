@@ -22,7 +22,7 @@ export default function App() {
         🐮
       </Text>
       <Button title="New game" onPress={newGame}></Button>
-      <Text>{`Score: ${lScore} | ${rScore}`}</Text>
+      <Text style={styles.scoreText}>{`Score: ${lScore} : ${rScore}`}</Text>
       <TabBar team={team} setTeam={setTeam} />
       <GameArea
         lScore={lScore}
@@ -46,4 +46,11 @@ const styles = StyleSheet.create({
   cowImage: {
     fontSize: 100,
   },
+  scoreText: {
+    fontSize: 40,
+    marginTop: 15,
+    marginBottom: 15,
+    fontWeight: "200",
+    color: "darkblue"
+  }
 });

@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import { Button } from "react-native-elements"
 
 function LeftTeam({ lScore, rScore, setLScore, setRScore }) {
   const addLCows = () => {
@@ -22,15 +23,37 @@ function LeftTeam({ lScore, rScore, setLScore, setRScore }) {
   };
 
   return (
-    <View>
-      <Button title="My Cows" onPress={addLCows}></Button>
-      <Button title="JK" onPress={minusLCows}></Button>
-      <Button title="Their Cows" onPress={minusRCows}></Button>
-      <Button title="Oops" onPress={addRCows}></Button>
-      <Button title="NOT A COW" onPress={lNotACow}></Button>
-      <Button title="Totes was..." onPress={lReversal}></Button>
+    <View style={styles.container}>
+      <View style={styles.buttonCont}>
+        <Button buttonStyle={{width:130}} raised={true} type="outline" title="My Cows" onPress={addLCows}/>
+        <Button buttonStyle={{width:130}} raised={true} type="outline"  title="JK" onPress={minusLCows}/>
+      </View>
+      <View style={styles.buttonCont}>
+        <Button buttonStyle={{width:130}} raised={true} type="outline"  title="Their Cows" onPress={minusRCows}/>
+        <Button buttonStyle={{width:130}} raised={true} type="outline"  title="Oops" onPress={addRCows}></Button>
+      </View>
+      <View style={styles.buttonCont}>
+        <Button buttonStyle={{width:130}} raised={true} type="outline"  title="NOT A COW" onPress={lNotACow}></Button>
+        <Button buttonStyle={{width:130}} raised={true} type="outline"  title="Totes was..." onPress={lReversal}></Button>
+      </View>
     </View>
   );
 }
 
 export default LeftTeam;
+
+const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    backgroundColor: "purple",
+    width: 350
+  },
+  buttonCont: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 30,
+    marginBottom: 30,
+    
+  },
+})

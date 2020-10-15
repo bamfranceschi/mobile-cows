@@ -16,8 +16,10 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "0.63.3",
+    "react-native-elements": "^2.3.2",
     "react-native-unimodules": "~0.11.0",
     "react-native-unordered-list": "^1.0.4",
+    "react-native-vector-icons": "^7.1.0",
     "react-native-web": "~0.13.7"
   },
   "devDependencies": {

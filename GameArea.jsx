@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import { View } from "react-native";
 import LeftTeam from "./LeftTeam";
 import RightTeam from "./RightTeam";
 
